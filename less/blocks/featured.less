@@ -13,13 +13,26 @@
 }
 
 .featured__info {
-  .text(15px; 24px; @color-text);
-  font-size: 15px;
-  line-height: 24px;
   margin: 30px 0;
+  .text(15px; 24px; @color-text);
 }
 
 .featured__description {
+  margin-bottom: 28px;
+  border-collapse: collapse;
   .text(15px; 20px; @color-text);
+  & td {
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.featured__price {
+  display: block;
+  padding: 28px;
+  text-align: center;
+  .text(17px; 24px; @color-text; bold);
 }
 

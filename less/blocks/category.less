@@ -3,22 +3,24 @@
 }
 
 .category__header {
-  background: url("../../img/hero-mobile@1x.jpg") no-repeat;
+  padding: 75px 30px 120px 30px;
+  background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+}
+
+.category__title {
+  text-align: center;
 }
 
 .category__item {
-  padding: 30px;
+  padding: 10px 160px 10px 30px;
+  &--interior {
+    background: @color-legend;
+  }
+  &--toys {
+    background: @color-category;
+  }
 }
 
 .category__link {
   color: #ffffff;
-  text-decoration: none;
-}
-
-.category__item--interior {
-  background: @color-legend;
-}
-
-.category__item--toys {
-  background: @color-category;
 }
