@@ -4,13 +4,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a href="index.html"><img src="#" width="86" height="35" alt="Магазин «Мишка»"></a>
+        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»"></a>
       </div>
       <div class="page-header__open-nav">
         <span class="page-header__toggle">Открыть меню</span>
@@ -27,14 +28,14 @@
 
     <section class="category">
       <div class="category__header">
-        <h2 class="category__title">Милые штучки ручной работы для дома</h2>
+        <h1 class="category__title">Милые штучки ручной работы для дома</h1>
       </div>
       <div class="category__wrapper">
         <div class="category__item  category__item--interior">
-          <h3><a href="#">Предметы интерьера</a></h3>
+          <h3><a class="category__link" href="#">Предметы интерьера</a></h3>
         </div>
         <div class="category__item  category__item--toys">
-          <h3><a href="#">Детские игрушки</a></h3>
+          <h3><a class="category__link" href="#">Детские игрушки</a></h3>
         </div>
       </div>
     </section>
@@ -58,9 +59,11 @@
             <td><span>15 см</span></td>
           </tr>
         </table>
-        <img class="featured__image" src="#" width="260" height="315" alt="Вязаные корзинки">
-        <span class="featured__price">Цена: 990 руб.</span>
-        <a class="featured__btn  btn  modal-btn" href="#">Заказать</a>
+        <img class="featured__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <div class="featured__buy">
+          <span class="featured__price">Цена: 990 руб.</span>
+          <a class="featured__btn  btn  modal-btn" href="#">Заказать</a>
+        </div>
       </div>
     </article>
 
@@ -112,7 +115,7 @@
           </tr>
         </table>
         <div class="contacts__map">
-          <img src="#" width="260" height="457" alt="Карта">
+          <img src="img/map-mobile@1x.jpg" width="260" height="457" alt="Карта">
         </div>
         <a class="contacts__btn  btn" href="#">Напишите нам</a>
       </div>
