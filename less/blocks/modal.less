@@ -1,0 +1,43 @@
+.modal {
+  padding: 30px;
+  text-align: center;
+}
+
+.modal__title {
+  .text(25px; 30px; @color-title; bold);
+  text-transform: uppercase;
+}
+
+.modal__choose-size {
+  .text(15px; 30px; @color-text);
+}
+
+.modal__size {
+  padding: 25px 0 30px 0;
+  margin: none;
+  border: none;
+}
+
+.modal__radio {
+  display: none;
+}
+
+.modal__radio-label {
+  .text(17px; 16px; @color-text; bold);
+  display: inline-block;
+  width: 18%;
+  padding: 15px;
+  border: 2px solid #ececec;
+}
+
+.modal__radio:checked + .modal__radio-label {
+  border-color: @color-legend;
+}
+
+.modal__submit {
+  .text(17px; 16px; @color-body; bold);
+  padding: 15px;
+  width: 100%;
+  background-color: @color-legend;
+  border: none;
+}
