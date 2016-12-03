@@ -4,37 +4,38 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
 
   <body>
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a href="index.html"><img src="#" width="86" height="35" alt="Магазин «Мишка»"></a>
+        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»"></a>
       </div>
       <div class="page-header__open-nav">
         <span class="page-header__toggle">Открыть меню</span>
       </div>
       <nav class="main-nav  main-nav--closed">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__item  main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a class="main-nav__link" href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__item--basket"><a class="main-nav__link" href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
     </header>
 
     <section class="category">
       <div class="category__header">
-        <h2 class="category__title">Милые штучки ручной работы для дома</h2>
+        <h1 class="category__title">Милые штучки ручной работы для дома</h1>
       </div>
       <div class="category__wrapper">
         <div class="category__item  category__item--interior">
-          <h3><a href="#">Предметы интерьера</a></h3>
+          <a class="category__link" href="#"><h3>Предметы интерьера</h3></a>
         </div>
         <div class="category__item  category__item--toys">
-          <h3><a href="#">Детские игрушки</a></h3>
+          <a class="category__link" href="#"><h3>Детские игрушки</h3></a>
         </div>
       </div>
     </section>
@@ -58,9 +59,11 @@
             <td><span>15 см</span></td>
           </tr>
         </table>
-        <img class="featured__image" src="#" width="260" height="315" alt="Вязаные корзинки">
-        <span class="featured__price">Цена: 990 руб.</span>
-        <a class="featured__btn  btn  modal-btn" href="#">Заказать</a>
+        <img class="featured__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+        <div class="featured__buy">
+          <span class="featured__price">Цена: 990 руб.</span>
+          <a class="featured__btn  btn  modal-btn" href="#">Заказать</a>
+        </div>
       </div>
     </article>
 
@@ -90,9 +93,9 @@
             </cite>
           </blockquote>
         </div>
-        <div class="reviews__slider-btn">
-          <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-          <button class="reviews__next" type="button">Следующий отзыв</button>
+        <div class="reviews__sliders-btn">
+          <button class="reviews__slider-btn  reviews__slider-btn--prev" type="button">Предыдущий отзыв</button>
+          <button class="reviews__slider-btn  reviews__slider-btn--next" type="button">Следующий отзыв</button>
         </div>
         <a class="reviews__btn  btn" href="#">Написать</a>
       </div>
@@ -104,17 +107,19 @@
         <table class="contacts__info">
           <tr>
             <td><span>e-mail:</span></td>
-            <td><a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
+            <td><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></td>
           </tr>
           <tr>
             <td><span>адрес:</span></td>
-            <td><span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></td>
+            <td class="contacts__address"><span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></td>
           </tr>
         </table>
         <div class="contacts__map">
-          <img src="#" width="260" height="457" alt="Карта">
+          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
         </div>
-        <a class="contacts__btn  btn" href="#">Напишите нам</a>
+        <div class="contacts__btn-wrapper">
+          <a class="contacts__btn  btn" href="#">Напишите нам</a>
+        </div>
       </div>
     </section>
 
