@@ -3,8 +3,13 @@
 }
 
 .category__header {
+  .container();
   padding: 75px 30px 120px 30px;
   background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% 0;
+}
+
+.category__wrapper {
+  .container();
 }
 
 .category__title {
@@ -12,6 +17,7 @@
 }
 
 .category__item {
+  padding: 0 30px;
   &--interior {
     background: @color-legend;
   }
@@ -22,5 +28,21 @@
 
 .category__link {
   display: block;
-  padding: 10px 160px 10px 30px;
+  padding: 10px 170px 10px 0;
+}
+
+@media @tablet-widths {
+
+  .category__wrapper {
+    display: flex;
+  }
+
+  .category__item {
+    width: 50%;
+  }
+
+  .category__header {
+    padding-top: 78px;
+    padding-bottom: 342px;
+  }
 }

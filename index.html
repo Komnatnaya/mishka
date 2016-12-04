@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -28,22 +29,24 @@
 
     <section class="category">
       <div class="category__header">
-        <h1 class="category__title">Милые штучки ручной работы для дома</h1>
+        <h1 class="category__title">Милые штучки ручной работы&nbsp;для&nbsp;дома</h1>
       </div>
       <div class="category__wrapper">
         <div class="category__item  category__item--interior">
-          <a class="category__link" href="#"><h3>Предметы интерьера</h3></a>
+          <a class="category__link  category__link--interior" href="#"><h3>Предметы интерьера</h3></a>
         </div>
         <div class="category__item  category__item--toys">
-          <a class="category__link" href="#"><h3>Детские игрушки</h3></a>
+          <a class="category__link  category__link--toys" href="#"><h3>Детские игрушки</h3></a>
         </div>
       </div>
     </section>
 
     <article class="featured">
       <div class="featured__wrapper">
-        <h2 class="featured__title">Вязаные корзинки</h2>
-        <span class="featured__weekly">Товар недели</span>
+        <div class="featured__titles">
+          <h2 class="featured__title">Вязаные корзинки</h2>
+          <span class="featured__weekly">Товар недели</span>
+        </div>
         <p class="featured__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
         <table class="featured__description">
           <tr>
@@ -70,14 +73,30 @@
     <section class="seo">
       <div class="seo__wrapper">
         <h2 class="seo__title">Коротко о нас:</h2>
-        <ul class="seo__list">
-          <li class="seo__item  seo__item--flower">Экологически чистые материалы</li>
-          <li class="seo__item  seo__item--money">Скандинавский стиль по российской цене</li>
-          <li class="seo__item  seo__item--heart">Увеличивает лайки на фотографиях</li>
-          <li class="seo__item  seo__item--yarn">Связано вручную с любовью и умилением</li>
-          <li class="seo__item  seo__item--rocket">Поддержка отечественного производителя</li>
-          <li class="seo__item  seo__item--gift">Поставляется в подарочной упаковке</li>
-        </ul>
+        <div class="seo__list">
+          <div class="seo__items">
+            <div class="seo__item  seo__item--flower">
+              <span>Экологически чистые материалы</span>
+            </div>
+            <div class="seo__item  seo__item--money">
+              <span>Скандинавский стиль по российской цене</span>
+            </div>
+            <div class="seo__item  seo__item--heart">
+              <span>Увеличивает лайки на фотографиях</span>
+            </div>
+          </div>
+          <div class="seo__items">
+            <div class="seo__item  seo__item--yarn">
+              <span>Связано вручную с любовью и умилением</span>
+            </div>
+            <div class="seo__item  seo__item--rocket">
+              <span>Поддержка отечественного производителя</span>
+            </div>
+            <div class="seo__item  seo__item--gift">
+              <span>Поставляется в подарочной упаковке</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -111,15 +130,15 @@
           </tr>
           <tr>
             <td><span>адрес:</span></td>
-            <td class="contacts__address"><span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span></td>
+            <td class="contacts__address"><span>г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8, офис&nbsp;101</span></td>
           </tr>
         </table>
-        <div class="contacts__map">
-          <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
-        </div>
-        <div class="contacts__btn-wrapper">
-          <a class="contacts__btn  btn" href="#">Напишите нам</a>
-        </div>
+      </div>
+      <div class="contacts__map">
+        <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+      </div>
+      <div class="contacts__btn-wrapper">
+        <a class="contacts__btn  btn" href="#">Напишите нам</a>
       </div>
     </section>
 
@@ -137,19 +156,21 @@
     </footer>
 
     <section class="modal">
-      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <h1 class="modal__title">Добавить в корзину</h1>
-        <span class="modal__choose-size">Выберите размер:</span>
-        <fieldset class="modal__size">
-          <input class="modal__radio" type="radio" name="size" id="size-s" value="size-s" checked>
-          <label class="modal__radio-label" for="size-s">S</label>
-          <input class="modal__radio" type="radio" name="size" id="size-m" value="size-m">
-          <label class="modal__radio-label" for="size-m">M</label>
-          <input class="modal__radio" type="radio" name="size" id="size-l" value="size-l">
-          <label class="modal__radio-label" for="size-l">L</label>
-        </fieldset>
-        <input class="modal__submit" type="submit" name="submit" value="Добавить">
-      </form>
+      <div class="modal__wrapper">
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
+          <span class="modal__choose-size">Выберите размер:</span>
+          <fieldset class="modal__size">
+            <input class="modal__radio" type="radio" name="size" id="size-s" value="size-s" checked>
+            <label class="modal__radio-label" for="size-s">S</label>
+            <input class="modal__radio" type="radio" name="size" id="size-m" value="size-m">
+            <label class="modal__radio-label" for="size-m">M</label>
+            <input class="modal__radio" type="radio" name="size" id="size-l" value="size-l">
+            <label class="modal__radio-label" for="size-l">L</label>
+          </fieldset>
+          <input class="modal__submit" type="submit" name="submit" value="Добавить">
+        </form>
+      </div>
     </section>
 
     <div class="overlay"></div>

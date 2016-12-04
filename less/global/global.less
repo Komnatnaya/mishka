@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
   background: @color-body;
@@ -7,16 +11,40 @@ body {
 h1 {
   font-family: 'OpenSans';
   .text(27px; 30px; @color-title; bold);
+
+  @media @tablet-widths {
+    .text(43px; 50px; @color-title; bold);
+  }
+
+  @media @desktop-widths {
+    .text(53px; 57px; @color-title; bold);
+  }
 }
 
 h2 {
   font-family: 'OpenSans';
   .text(25px; 30px; @color-title; bold);
+
+  @media @tablet-widths {
+    .text(43px; 50px; @color-title; bold);
+  }
+
+  @media @desktop-widths {
+    .text(53px; 57px; @color-title; bold);
+  }
 }
 
 h3 {
   font-family: 'OpenSans';
   .text(19px; 24px; @color-body; bold);
+
+  @media @tablet-widths {
+    .text(20px; 30px; @color-body; bold);
+  }
+
+  @media @desktop-widths {
+    .text(20px; 30px; @color-body; bold);
+  }
 }
 
 p {

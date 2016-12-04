@@ -1,4 +1,5 @@
 .featured {
+  .container();
   padding: 30px;
 }
 
@@ -35,5 +36,52 @@
   display: block;
   padding: 28px;
   text-align: center;
+}
+
+@media @tablet-widths {
+
+  .featured {
+    padding: 60px 0;
+  }
+
+  .featured__wrapper {
+    position: relative;
+  }
+
+  .featured__titles {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .featured__weekly {
+    display: block;
+    width: 105px;
+    padding-top: 15px;
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  .featured__info {
+    .text(17px; 30px; @color-text);
+    width: 290px;
+  }
+
+  .featured__description {
+    width: 290px;
+  }
+
+  .featured__image {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+  }
+
+  .featured__buy {
+    width: 290px;
+  }
+
+  .featured__price {
+    .text(20px; 24px; @color-text; bold);
+  }
 }
 
