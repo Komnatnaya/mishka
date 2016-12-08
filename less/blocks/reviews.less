@@ -1,5 +1,9 @@
 .reviews {
   .container();
+}
+
+.reviews__wrapper {
+  position: relative;
   padding: 30px;
 }
 
@@ -9,12 +13,8 @@
 }
 
 .reviews__item {
-  margin: 0 0 28px 0;
   .text(15px; 30px; @color-text);
-}
-
-.reviews__item p {
-  margin-bottom: 35px;
+  margin: 0 0 35px 0;
 }
 
 .reviews__author-name {
@@ -29,7 +29,7 @@
 
 .reviews__sliders-btn {
   display: flex;
-  margin-bottom: 38px;
+  margin: 38px 0;
 }
 .reviews__slider-btn {
   padding: 26px;
@@ -39,3 +39,72 @@
   border: 1px solid #ececec;
 }
 
+@media @tablet-widths {
+
+  .reviews__wrapper {
+    padding: 70px 0 50px 0;
+  }
+
+  .reviews__title {
+    margin-bottom: 50px;
+  }
+
+  .reviews__item {
+    .text(17px; 30px; @color-text);
+    margin-bottom: 60px;
+  }
+
+  .reviews__list-slider {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews__list cite {
+    display: block;
+    width: 50%;
+  }
+
+  .reviews__author-name {
+    .text(17px; 24px; @color-title; bold);
+  }
+
+  .reviews__author-nickname {
+    .text(17px; 30px; @color-text);
+    font-style: normal;
+  }
+
+  .reviews__sliders-btn {
+    width: 25%;
+    margin: 0;
+  }
+
+  .reviews__slider-btn {
+    border: none;
+    outline: 1px dashed gray;
+  }
+
+  .reviews__btn {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 171px;
+  }
+}
+
+@media @desktop-widths {
+  .reviews__wrapper {
+    padding-left: 175px;
+  }
+
+  .reviews__list cite {
+    width: 30%;
+  }
+
+  .reviews__sliders-btn {
+    width: 175px;
+  }
+
+  .reviews__btn {
+    width: 175px;
+  }
+}

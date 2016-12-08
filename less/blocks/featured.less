@@ -55,9 +55,8 @@
 
   .featured__weekly {
     display: block;
-    width: 105px;
+    width: 120px;
     padding-top: 15px;
-    padding-right: 25px;
     text-align: center;
   }
 
@@ -85,3 +84,28 @@
   }
 }
 
+@media @desktop-widths {
+
+  .featured__titles {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .featured__weekly {
+    width: 170px;
+    padding: 15px 25px 0 25px;
+  }
+
+  .featured__info-block {
+    margin-left: 175px;
+  }
+
+  .featured__image {
+    top: 0;
+    z-index: -1;
+  }
+
+  .featured__buy {
+    margin-left: 175px;
+  }
+}
