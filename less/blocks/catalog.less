@@ -1,10 +1,35 @@
 .catalog__header {
-  padding-top: 55px;
-  padding-bottom: 55px;
+  padding: 55px 0;
   text-align: center;
   background: @color-footer;
 }
 
 .catalog__wrapper {
+  .container();
   padding: 30px;
+}
+
+@media @tablet-widths {
+
+  .catalog__header {
+    padding: 42px 0;
+    margin-bottom: 85px;
+  }
+
+  .catalog__wrapper {
+    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+
+  .catalog__header {
+    padding: 55px 0;
+    margin-bottom: 145px;
+  }
+
+  .catalog__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
