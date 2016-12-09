@@ -6,9 +6,38 @@
 }
 
 .order__wrapper {
+  .container();
   padding: 15px 30px 55px 30px;
 }
 
 .order__subtitle {
   .text(13px; 24px; @color-text);
+}
+
+@media @tablet-widths {
+
+  .order__header {
+    padding: 42px 0;
+    margin-bottom: 85px;
+  }
+
+  .order__wrapper {
+    padding: 0;
+  }
+
+  .order__subtitle {
+    .text(17px; 30px; @color-text);
+  }
+}
+
+@media @desktop-widths {
+
+  .order__header {
+    padding: 55px 0;
+    margin-bottom: 145px;
+  }
+
+  .order__subtitle {
+    padding: 0 175px;
+  }
 }

@@ -1,19 +1,59 @@
+.order-form {
+  .text(17px; 18px; @color-title; bold);
+}
+
 .order-form__title {
   .text(17px; 16px; @color-legend; bold);
+  position: relative;
   text-transform: uppercase;
 }
 
-.order-form {
-  .text(17px; 18px; @color-title; bold);
+.order-form__title::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 62px;
+  width: 198px;
+  height: 1px;
+  background-color: @color-legend;
+}
+
+.order-form__e-mail .order-form__title::after {
+  left: 81px;
+  width: 179px;
 }
 
 .order-form__type,
 .order-form__color,
 .order-form__fullname,
 .order-form__phone,
-.order-form__e-mail {
-  padding: 15px 0;
+.order-form__e-mail,
+.order-form__addition {
+  margin: 0;
   border: none;
+}
+
+.order-form__type {
+  padding: 24px 0;
+}
+
+.order-form__color {
+  padding: 15px 0;
+}
+
+.order-form__fullname {
+  padding: 30px 0 8px 0;
+}
+
+.order-form__phone,
+.order-form__e-mail {
+  padding: 8px 0;
+}
+
+.order-form__type-wrapper,
+.order-form__color-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .order-form__radio,
@@ -21,11 +61,14 @@
   display: none;
 }
 
-.order-form__radio-label,
-.order-form__checkbox-label {
-  display: inline-block;
+.order-form__radio-label {
   position: relative;
-  padding: 15px 30px 15px 60px;
+  padding: 14px 30px 14px 60px;
+}
+
+.order-form__checkbox-label {
+  position: relative;
+  padding: 22px 30px 22px 60px;
 }
 
 .order-form__radio-label::before {
@@ -58,7 +101,7 @@
 .order-form__checkbox-label::before {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 12px;
   left: 0;
   width: 34px;
   height: 34px;
@@ -68,7 +111,7 @@
 .order-form__checkbox-label::after {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 22px;
   left: 8px;
   display: none;
   width: 20px;
@@ -82,27 +125,26 @@
   display: block;
 }
 
-.order-form__addition {
-  padding: 25px 0 10px 0;
-  border: none;
-}
-
 .order-form__text,
 .order-form__tel,
 .order-form__email {
-  width: 95%;
-  padding: 12px 0;
-  margin-bottom: 20px;
+  width: 100%;
+  padding: 15px 0;
+  margin-bottom: 23px;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 2px solid @color-title;
 }
 
+.order-form__addition {
+  padding: 26px 0 12px 0;
+}
+
 .order-form__textarea {
-  .text(17px; 18px;@color-placeholder);
-  width: 85%;
-  padding: 14px;
+  .text(17px; 18px; @color-text);
+  width: 100%;
+  padding: 15px;
   border: 2px solid @color-text;
 }
 
@@ -112,6 +154,6 @@
 
 .order-form__submit {
   margin-top: 30px;
-  width: 95%;
+  width: 100%;
   background-color: @color-body;
 }

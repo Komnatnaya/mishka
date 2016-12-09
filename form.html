@@ -38,25 +38,29 @@
         <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="order-form__type">
             <legend class="order-form__title">Тип</legend>
-            <input class="order-form__radio" type="radio" name="type" value="interior" id="interior" checked>
-            <label class="order-form__radio-label" for="interior">Аксессуар для интерьера</label>
-            <input class="order-form__radio" type="radio" name="type" value="toy" id="toy">
-            <label class="order-form__radio-label" for="toy">Детская игрушка</label>
+            <div class="order-form__type-wrapper">
+              <input class="order-form__radio" type="radio" name="type" value="interior" id="interior" checked>
+              <label class="order-form__radio-label" for="interior">Аксессуар для интерьера</label>
+              <input class="order-form__radio" type="radio" name="type" value="toy" id="toy">
+              <label class="order-form__radio-label" for="toy">Детская игрушка</label>
+            </div>
           </fieldset>
           <fieldset class="order-form__color">
             <legend class="order-form__title">Цвет</legend>
-            <input class="order-form__checkbox" type="checkbox" name="white" id="white" checked>
-            <label class="order-form__checkbox-label" for="white">Белый</label>
-            <input class="order-form__checkbox" type="checkbox" name="gray" id="gray" checked>
-            <label class="order-form__checkbox-label" for="gray">Серый</label>
-            <input class="order-form__checkbox" type="checkbox" name="tiffany" id="tiffany">
-            <label class="order-form__checkbox-label" for="tiffany">«Тиффани»</label>
-            <input class="order-form__checkbox" type="checkbox" name="black" id="black">
-            <label class="order-form__checkbox-label" for="black">Черный</label>
-            <input class="order-form__checkbox" type="checkbox" name="pink" id="pink">
-            <label class="order-form__checkbox-label" for="pink">Розовый</label>
-            <input class="order-form__checkbox" type="checkbox" name="orange" id="orange">
-            <label class="order-form__checkbox-label" for="orange">Оранжевый</label>
+            <div class="order-form__color-wrapper">
+              <input class="order-form__checkbox" type="checkbox" name="white" id="white" checked>
+              <label class="order-form__checkbox-label" for="white">Белый</label>
+              <input class="order-form__checkbox" type="checkbox" name="gray" id="gray" checked>
+              <label class="order-form__checkbox-label" for="gray">Серый</label>
+              <input class="order-form__checkbox" type="checkbox" name="tiffany" id="tiffany">
+              <label class="order-form__checkbox-label" for="tiffany">«Тиффани»</label>
+              <input class="order-form__checkbox" type="checkbox" name="black" id="black">
+              <label class="order-form__checkbox-label" for="black">Черный</label>
+              <input class="order-form__checkbox" type="checkbox" name="pink" id="pink">
+              <label class="order-form__checkbox-label" for="pink">Розовый</label>
+              <input class="order-form__checkbox" type="checkbox" name="orange" id="orange">
+              <label class="order-form__checkbox-label" for="orange">Оранжевый</label>
+            </div>
           </fieldset>
           <fieldset class="order-form__fullname">
             <legend class="order-form__title">ФИО</legend>
@@ -77,7 +81,7 @@
           </fieldset>
           <fieldset class="order-form__addition">
             <legend class="order-form__title">Доп</legend>
-            <textarea class="order-form__textarea" name="textarea" rows="7">Опишите все ваши пожелания к заказу</textarea>
+            <textarea class="order-form__textarea" name="textarea" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <small class="order-form__small"><sup>*</sup>Поля обязательны для заполнения</small>
           <input class="order-form__submit btn" type="submit" name="submit" value="Отправить заказ">
@@ -87,6 +91,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo-block">
+          <a class="page-footer__logo" href="index.html"><img width="105" height="38" src=""></a>
+        </div>
         <div class="social">
           <a class="social__link  social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
           <a class="social__link  social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
