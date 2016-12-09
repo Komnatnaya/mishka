@@ -76,8 +76,8 @@
   position: absolute;
   top: 5px;
   left: 0;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border: 2px solid @color-text;
   border-radius: 50%;
 }
@@ -85,8 +85,8 @@
 .order-form__radio-label::after {
   content: "";
   position: absolute;
-  top: 16px;
-  left: 11px;
+  top: 17px;
+  left: 12px;
   display: none;
   width: 16px;
   height: 16px;
@@ -101,7 +101,7 @@
 .order-form__checkbox-label::before {
   content: "";
   position: absolute;
-  top: 12px;
+  top: 11px;
   left: 0;
   width: 34px;
   height: 34px;
@@ -111,7 +111,7 @@
 .order-form__checkbox-label::after {
   content: "";
   position: absolute;
-  top: 22px;
+  top: 21px;
   left: 8px;
   display: none;
   width: 20px;
@@ -156,4 +156,74 @@
   margin-top: 30px;
   width: 100%;
   background-color: @color-body;
+}
+
+@media @tablet-widths {
+
+  .order-form__type,
+  .order-form__color,
+  .order-form__fullname,
+  .order-form__phone,
+  .order-form__e-mail,
+  .order-form__addition {
+    position: relative;
+    padding-left: 167px;
+  }
+
+  .order-form__type {
+    padding-top: 27px;
+  }
+
+  .order-form__title {
+    position: absolute;
+    top: 66px;
+    left: 0;
+  }
+
+  .order-form__type .order-form__title {
+    top: 60px;
+  }
+
+  .order-form__title::after {
+    display: none;
+  }
+
+  .order-form__radio-label {
+    font-size: 19px;
+    padding: 29px 30px 29px 81px;
+  }
+
+  .order-form__radio-label::before {
+    top: 12px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .order-form__radio-label::after {
+    top: 27px;
+    left: 15px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .order-form__color {
+    background-color: @color-footer;
+  }
+
+  .order-form__checkbox-label {
+    font-size: 19px;
+    padding: 29px 30px 29px 81px;
+  }
+
+  .order-form__checkbox-label::before {
+    width: 50px;
+    height: 48px;
+  }
+
+  .order-form__checkbox-label::after {
+    top: 25px;
+    left: 12px;
+    width: 28px;
+    height: 13px;
+  }
 }
