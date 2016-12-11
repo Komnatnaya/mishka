@@ -197,7 +197,6 @@
 
   .order-form__title {
     position: absolute;
-    top: 0;
     left: 0;
   }
 
@@ -245,7 +244,6 @@
 
   .order-form__checkbox-label {
     width: 48%;
-    font-size: 19px;
     padding: 29px 30px 29px 81px;
   }
 
@@ -261,12 +259,87 @@
     height: 13px;
   }
   
+  .order-form__fullname {
+    padding-top: 49px;
+    padding-bottom: 30px;
+  }
+  
   .order-form__fullname-wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: baseline;
+  }
+  
+  .order-form__fullname .order-form__title {
+    top: 16px;
+  }
+  
+  .order-form__text {
+    .text(19px; 18px; @color-text);
+    width: 65%;
+    flex-grow: 1;
+    padding-left: 18px;
   }
   
   .order-form__text-label {
-    
+    padding-right: 27px;
+  }
+  
+  .order-form__phone {
+    padding-top: 45px;
+    padding-bottom: 0;
+    background-color: @color-footer;
+  }
+  
+  .order-form__phone .order-form__title {
+    top: 18px;
+  }
+  
+  .order-form__tel,
+  .order-form__email {
+    .text(19px; 18px; @color-text);
+    padding-left: 18px;
+    padding-right: 55px;
+    background-color: @color-footer;
+  }
+  
+  .order-form__e-mail {
+    padding-top: 0;
+    padding-bottom: 29px;
+    background-color: @color-footer;
+  }
+  
+  .order-form__e-mail .order-form__title {
+    top: 18px;
+  }
+  
+  .order-form__addition {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .order-form__addition .order-form__title {
+    top: 16px;
+  }
+  
+  .order-form__textarea {
+    .text(19px; 18px; @color-text);
+  }
+  
+  .order-form__btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 50px 50px 50px;
+  }
+  
+  .order-form__small {
+    .text(17px; 30px; @color-text);
+  }
+  
+  .order-form__submit {
+    width: 34%;
+    margin-top: 0;
   }
 }
