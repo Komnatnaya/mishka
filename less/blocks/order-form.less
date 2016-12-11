@@ -331,7 +331,9 @@
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
+    width: 768px;
     padding: 0 50px 50px 50px;
+    margin: 0 auto;
   }
   
   .order-form__small {
@@ -341,5 +343,37 @@
   .order-form__submit {
     width: 34%;
     margin-top: 0;
+  }
+}
+
+@media @desktop-widths {
+  
+  .order__wrapper-blocks {
+    width: 1050px;
+    padding-left: 175px;
+    padding-right: 175px;
+  }
+  
+  .order-form__title {
+    left: 65px;
+  }
+  
+  .order-form__color-wrapper {
+    justify-content: flex-start;
+    padding-right: 0;
+  }
+  
+  .order-form__checkbox-label {
+    width: 30%;
+  }
+  
+  .order-form__text {
+    width: 80%;
+  }
+  
+  .order-form__btn {
+    width: 1050px;
+    padding-left: 175px;
+    padding-right: 175px;
   }
 }
