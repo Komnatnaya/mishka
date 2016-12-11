@@ -37,8 +37,8 @@
         </div>
         <form class="order-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="order-form__type">
-            <legend class="order-form__title">Тип</legend>
-            <div class="order-form__type-wrapper">
+            <div class="order__wrapper-blocks  order-form__type-wrapper">
+              <legend class="order-form__title">Тип</legend>
               <input class="order-form__radio" type="radio" name="type" value="interior" id="interior" checked>
               <label class="order-form__radio-label" for="interior">Аксессуар для интерьера</label>
               <input class="order-form__radio" type="radio" name="type" value="toy" id="toy">
@@ -46,8 +46,8 @@
             </div>
           </fieldset>
           <fieldset class="order-form__color">
-            <legend class="order-form__title">Цвет</legend>
-            <div class="order-form__color-wrapper">
+            <div class="order__wrapper-blocks  order-form__color-wrapper">
+              <legend class="order-form__title">Цвет</legend>
               <input class="order-form__checkbox" type="checkbox" name="white" id="white" checked>
               <label class="order-form__checkbox-label" for="white">Белый</label>
               <input class="order-form__checkbox" type="checkbox" name="gray" id="gray" checked>
@@ -63,25 +63,33 @@
             </div>
           </fieldset>
           <fieldset class="order-form__fullname">
-            <legend class="order-form__title">ФИО</legend>
-            <label class="order-form__text-label" for="name">Имя:</label>
-            <input class="order-form__text" type="text" name="name" placeholder="Введите ваше имя*" id="name" required>
-            <label class="order-form__text-label" for="surname">Фамилия:</label>
-            <input class="order-form__text" type="text" name="surname" placeholder="Укажите фамилию*" id="surname" required>
-            <label class="order-form__text-label" for="fathername">Отчество:</label>
-            <input class="order-form__text" type="text" name="fathername" placeholder="Отчество, если желаете" id="fathername">
+            <div class="order__wrapper-blocks  order-form__fullname-wrapper">
+              <legend class="order-form__title">ФИО</legend>
+              <label class="order-form__text-label" for="name">Имя:</label>
+              <input class="order-form__text" type="text" name="name" placeholder="Введите ваше имя*" id="name" required>
+              <label class="order-form__text-label" for="surname">Фамилия:</label>
+              <input class="order-form__text" type="text" name="surname" placeholder="Укажите фамилию*" id="surname" required>
+              <label class="order-form__text-label" for="fathername">Отчество:</label>
+              <input class="order-form__text" type="text" name="fathername" placeholder="Отчество, если желаете" id="fathername">
+            </div>
           </fieldset>
           <fieldset class="order-form__phone">
-            <legend class="order-form__title">Тел</legend>
-            <input class="order-form__tel" type="tel" name="tel" placeholder="+7 XXX XX XX*">
+            <div class="order__wrapper-blocks  order-form__phone-wrapper">
+              <legend class="order-form__title">Тел</legend>
+              <input class="order-form__tel" type="tel" name="tel" placeholder="+7 XXX XX XX*">
+            </div>
           </fieldset>
           <fieldset class="order-form__e-mail">
-            <legend class="order-form__title">E-mail</legend>
-            <input class="order-form__email" type="email" name="email" placeholder="Ваш Email*">
+            <div class="order__wrapper-blocks  order-form__e-mail-wrapper">
+              <legend class="order-form__title">E-mail</legend>
+              <input class="order-form__email" type="email" name="email" placeholder="Ваш Email*">
+            </div>
           </fieldset>
           <fieldset class="order-form__addition">
-            <legend class="order-form__title">Доп</legend>
-            <textarea class="order-form__textarea" name="textarea" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <div class="order__wrapper-blocks  order-form__addition-wrapper">
+              <legend class="order-form__title">Доп</legend>
+              <textarea class="order-form__textarea" name="textarea" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </div>
           </fieldset>
           <small class="order-form__small"><sup>*</sup>Поля обязательны для заполнения</small>
           <input class="order-form__submit btn" type="submit" name="submit" value="Отправить заказ">

@@ -1,8 +1,15 @@
-.modal__wrapper {
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: none;
   width: 320px;
-  margin: 0 auto;
   padding: 30px;
+  margin-top: -168px;
+  margin-left: -160px;
   text-align: center;
+  background-color: @color-body;
   border: 1px solid #c6c6c6;
   box-shadow: 0 3px 10px #c6c6c6;
 }
@@ -53,9 +60,10 @@
 
 @media @tablet-widths {
 
-  .modal__wrapper {
+  .modal {
     width: 567px;
     padding: 47px 108px;
+    margin-left: -284px;
   }
 
   .modal__title {
