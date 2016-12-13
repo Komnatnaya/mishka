@@ -1,36 +1,131 @@
 .contacts {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  .container();
+}
+
+.contacts__wrapper {
+  padding: 30px 30px 0 30px;
 }
 
 .contacts__title {
-  margin: 30px 30px 38px 30px;
+  margin: 28px 0 25px 0;
+  font-size: 18px;
 }
 
 .contacts__info {
   .text(15px; 30px; @color-text);
-  & td {
-    padding-left: 30px;
-    padding-bottom: 35px;
-    vertical-align: top;
-  }
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contacts__row {
+  display: flex;
+}
+
+.contacts__cell {
+  padding-bottom: 28px;
+  vertical-align: top;
+}
+
+.contacts__cell:first-child {
+  width: 77px;
+}
+
+.contacts__address {
+  width: 185px;
+  padding-right: 40px;
 }
 
 .contacts__link {
   color: @color-text;
 }
 
-.contacts__address {
-  padding-right: 75px;
-}
-
 .contacts__map {
   width: 100%;
-  margin-bottom: 38px;
   text-align: center;
 }
 
 .contacts__btn-wrapper {
-  padding-left: 30px;
-  padding-right: 30px;
+  .container();
+  padding: 38px 30px;
+}
+
+@media @tablet-widths {
+
+  .contacts__wrapper {
+    padding: 0;
+    margin-bottom: 57px;
+  }
+  
+  .contacts__title {
+    font-size: 43px;
+  }
+
+  .contacts__info {
+    .text(17px; 30px; @color-text);
+    flex-direction: row;
+  }
+
+  .contacts__row {
+    width: 50%;
+  }
+
+  .contacts__address {
+    width: 230px;
+    padding: 0;
+  }
+
+  .contacts__btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 57px;
+  }
+
+  .contacts__btn {
+    width: 230px;
+  }
+}
+
+@media @desktop-widths {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 461px;
+    margin-top: 80px;
+    margin-bottom: 105px;
+  }
+
+  .contacts__wrapper {
+    width: 50%;
+    padding-left: 175px;
+    margin-bottom: 0;
+  }
+
+  .contacts__title {
+    margin-top: 70px;
+    font-size: 53px;
+  }
+
+  .contacts__info {
+    flex-direction: column;
+  }
+
+  .contacts__row {
+    width: 100%;
+  }
+
+  .contacts__map {
+    width: 50%;
+    order: 1;
+    text-align: left;
+  }
+
+  .contacts__btn-wrapper {
+    display: block;
+    width: 50%;
+    padding: 0 0 0 175px;
+    margin-right: 0;
+  }
 }

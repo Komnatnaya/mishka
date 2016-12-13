@@ -1,3 +1,15 @@
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    width: 668px;
+  }
+
+  @media @desktop-widths {
+    width: 1050px;
+  }
+}
 
 .text(@font-size; @line-height; @color:#000000; @font-weight:normal) {
   font-size: @font-size;

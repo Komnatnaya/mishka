@@ -3,6 +3,7 @@
 
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -18,12 +19,18 @@
       </div>
       <nav class="main-nav  main-nav--closed">
         <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__logo"><a class="main-nav__link" href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Магазин «Мишка»"></a></li>
+          <li class="main-nav__item  main-nav__item--catalog"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item  main-nav__item--form"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
           <li class="main-nav__item  main-nav__item--search"><a class="main-nav__link" href="#">Поиск по сайту</a></li>
           <li class="main-nav__item  main-nav__item--basket"><a class="main-nav__link" href="#">Корзина: пока пуста</a></li>
+          <li class="main-nav__item  main-nav__item--desktop"><a class="main-nav__link" href="#">Новые поступления</a></li>
+          <li class="main-nav__item  main-nav__item--desktop"><a class="main-nav__link" href="#">Распродажа</a></li>
         </ul>
       </nav>
+      <div class="page-header__free-block">
+        <span class="page-header__free">Бесплатная доставка по России</span>
+      </div>
     </header>
 
     <section class="catalog">
@@ -34,8 +41,10 @@
         <article class="catalog-item">
           <a class="catalog-item__image" href="#"><img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зайчик"></a>
           <div class="catalog-item__wrapper">
-            <a href="#"><h1 class="catalog-item__title" >Зайчик-попрыгайчик</h1></a>
-            <span>Рост 30 см, вес 200 г</span>
+            <div class="catalog-item__info">
+              <a href="#"><h1 class="catalog-item__title" >Зайчик-попрыгайчик</h1></a>
+              <span>Рост 30 см, вес 200 г</span>
+            </div>
             <div class="catalog-item__buy">
               <span class="catalog-item__price">1200 руб.</span>
               <a class="catalog-item__basket  modal-btn" href="#">Добавить в корзину</a>
@@ -45,8 +54,10 @@
         <article class="catalog-item">
           <a class="catalog-item__image" href="#"><img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка"></a>
           <div class="catalog-item__wrapper">
-          <a href="#"><h1 class="catalog-item__title">Корзинка для белья</h1></a>
-            <span>Диаметр 15 см, высота 10 см</span>
+            <div class="catalog-item__info">
+              <a href="#"><h1 class="catalog-item__title">Корзинка для белья</h1></a>
+              <span>Диаметр 15 см, высота 10 см</span>
+            </div>
             <div class="catalog-item__buy">
               <span class="catalog-item__price">690 руб.</span>
               <a class="catalog-item__basket  modal-btn" href="#">Добавить в корзину</a>
@@ -56,8 +67,10 @@
         <article class="catalog-item">
           <a class="catalog-item__image" href="#"><img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка"></a>
           <div class="catalog-item__wrapper">
-            <a href="#"><h1 class="catalog-item__title">Большая корзинка для игрушек</h1></a>
-            <span>Диаметр 30 см, высота 30 см</span>
+            <div class="catalog-item__info">
+              <a href="#"><h1 class="catalog-item__title">Большая корзинка для&nbsp;игрушек</h1></a>
+              <span>Диаметр 30 см, высота 30 см</span>
+            </div>
             <div class="catalog-item__buy">
               <span class="catalog-item__price">1500 руб.</span>
               <a class="catalog-item__basket  modal-btn" href="#">Добавить в корзину</a>
@@ -80,6 +93,9 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
+        <div class="page-footer__logo-block">
+          <a class="page-footer__logo" href="index.html"><img width="105" height="38" src=""></a>
+        </div>
         <div class="social">
           <a class="social__link  social__link--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
           <a class="social__link  social__link--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
@@ -92,19 +108,21 @@
     </footer>
 
     <section class="modal">
-      <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
-        <h1 class="modal__title">Добавить в корзину</h1>
-        <span class="modal__choose-size">Выберите размер:</span>
-        <fieldset class="modal__size">
-          <input class="modal__radio" type="radio" name="size" id="size-s" value="size-s" checked>
-          <label class="modal__radio-label" for="size-s">S</label>
-          <input class="modal__radio" type="radio" name="size" id="size-m" value="size-m">
-          <label class="modal__radio-label" for="size-m">M</label>
-          <input class="modal__radio" type="radio" name="size" id="size-l" value="size-l">
-          <label class="modal__radio-label" for="size-l">L</label>
-        </fieldset>
-        <input class="modal__submit" type="submit" name="submit" value="Добавить">
-      </form>
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <h1 class="modal__title">Добавить в&nbsp;корзину</h1>
+          <span class="modal__choose-size">Выберите размер:</span>
+          <fieldset class="modal__size">
+            <div class="modal__field-size">
+              <input class="modal__radio" type="radio" name="size" id="size-s" value="size-s" checked>
+              <label class="modal__radio-label" for="size-s">S</label>
+              <input class="modal__radio" type="radio" name="size" id="size-m" value="size-m">
+              <label class="modal__radio-label" for="size-m">M</label>
+              <input class="modal__radio" type="radio" name="size" id="size-l" value="size-l">
+              <label class="modal__radio-label" for="size-l">L</label>
+            </div>
+          </fieldset>
+          <input class="modal__submit" type="submit" name="submit" value="Добавить">
+        </form>
     </section>
 
     <div class="overlay"></div>
