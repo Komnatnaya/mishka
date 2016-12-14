@@ -1,4 +1,8 @@
 .manufacture {
+  width: 100%;
+}
+
+.manufacture__wrapper {
   .container();
   padding: 0 30px 58px 30px;
 }
@@ -29,7 +33,7 @@
 
 @media @tablet-widths {
 
-  .manufacture {
+  .manufacture__wrapper {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -60,15 +64,15 @@
 
 @media @desktop-widths {
 
-  .manufacture {
-    flex-wrap: wrap;
+  .manufacture__wrapper {
+    position: relative;
     justify-content: space-between;
-    height: 455px;
+    align-items: flex-end;
     margin-bottom: 105px;
   }
 
   .manufacture__header {
-    width: 35%;
+    width: 369px;
     padding: 84px 130px 0 79px;
   }
 
@@ -77,12 +81,13 @@
   }
 
   .manufacture__video {
-    height: 100%;
-    width: 65%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .manufacture__caption {
-    width: 35%;
+    width: 369px;
     padding: 0 56px 59px 79px;
   }
 }
