@@ -1,20 +1,34 @@
 .social {
-  padding: 20px;
-  text-align: center;
-  line-height: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 87px;;
 }
 
 .social__link {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin-right: 25px;
-  outline: 1px dashed gray;
   font-size: 0;
 }
 
 .social__link:last-child {
   margin-right: 0;
+}
+
+.social__icon-inst,
+.social__icon-fb,
+.social__icon-tw {
+  fill: @color-social;
+}
+
+.social__link--inst:hover .social__icon-inst,
+.social__link--fb:hover .social__icon-fb,
+.social__link--tw:hover .social__icon-tw {
+	fill: @color-icon;
+}
+
+.social__link--inst:active .social__icon-inst,
+.social__link--fb:active .social__icon-fb,
+.social__link--tw:active .social__icon-tw  {
+	fill: @color-down;
 }
 
 @media @tablet-widths {
