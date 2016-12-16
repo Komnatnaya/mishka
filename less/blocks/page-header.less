@@ -1,24 +1,107 @@
 .page-header {
-  position: relative;
   border-bottom: 1px solid @color-border;
 }
 
-.page-header__logo {
+.page-header__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 320px;
   margin: 0 auto;
-  padding: 20px;
-  text-align: center;
 }
 
-.page-header__toggle {
+.page-header__logo {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  background-color: @color-body;
+}
+
+.page-header__toggle-nav {
   position: absolute;
-  font-size: 0;
+  z-index: 3;
+  top: 20px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+}
+
+@media @mobile-widths-only {
+
+  .page-header__toggle {
+    position: relative;
+    top: 14px;
+    left: 5px;
+    display: block;
+    font-size: 0;
+
+    &--close-nav {
+      width: 20px;
+      height: 2px;
+      background-color: #221f1f;
+    }
+
+    &--close-nav::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #221f1f;
+    }
+
+    &--close-nav::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 20px;
+      height: 2px;
+      background-color: #221f1f;
+    }
+
+    &--open-nav {
+      background-color: inherit;
+    }
+
+    &--open-nav::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: #221f1f;
+      transform: rotate(45deg);
+    }
+
+    &--open-nav::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: #221f1f;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .page-header__toggle--nojs {
+    display: none;
+  }
 }
 
 @media @tablet-widths {
 
   .page-header {
     border-bottom: none;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
   }
 
   .back-color {
@@ -34,5 +117,12 @@
 
   .page-header__logo {
     display: none;
+  }
+}
+
+@media @desktop-widths {
+
+  .page-header__wrapper {
+    width: 1150px;
   }
 }

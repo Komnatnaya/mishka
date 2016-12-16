@@ -57,6 +57,22 @@
     display: block;
     width: 30%;
   }
+  
+  .page-footer__logo {
+    display: block;
+  }
+  
+  .page-footer__icon-logo {
+    fill: #231f20;
+  }
+  
+  .page-footer__logo:hover .page-footer__icon-logo {
+    fill: @color-icon;
+  }
+  
+  .page-footer__logo:active .page-footer__icon-logo {
+    fill: @color-down;
+  }
 
   .page-footer__copyright {
     width: 30%;
@@ -65,6 +81,7 @@
   }
 
   .page-footer__copyright-link {
-    padding: 0 55px 0 0;
+    border-top: none;
+    padding: 0;
   }
 }

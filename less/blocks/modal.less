@@ -2,7 +2,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  z-index: 2;
+  z-index: 10;
   display: none;
   width: 320px;
   padding: 30px;
@@ -49,13 +49,17 @@
   border-color: @color-legend;
 }
 
-.modal__submit {
+.modal__btn{
   .text(17px; 16px; @color-body; bold);
   padding: 18px;
   width: 100%;
   text-transform: uppercase;
   background-color: @color-legend;
   border: none;
+}
+
+.modal--show {
+  display: block;
 }
 
 @media @tablet-widths {
