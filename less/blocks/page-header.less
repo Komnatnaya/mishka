@@ -13,9 +13,18 @@
 .page-header__logo {
   position: relative;
   z-index: 2;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 80px;
   text-align: center;
   background-color: @color-body;
+}
+
+.page-header__logo:hover .page-header__logo-header {
+  fill: @color-hover-logo;
+}
+
+.page-header__logo:active .page-header__logo-header {
+  fill: @color-active-logo;
 }
 
 .page-header__toggle-nav {
@@ -25,6 +34,7 @@
   right: 30px;
   width: 30px;
   height: 30px;
+  font-size: 0;
 }
 
 @media @mobile-widths-only {
@@ -34,7 +44,6 @@
     top: 14px;
     left: 5px;
     display: block;
-    font-size: 0;
 
     &--close-nav {
       width: 20px;
@@ -104,7 +113,7 @@
     width: 768px;
   }
 
-  .back-color {
+  .page-header__back-color {
     position: absolute;
     top: 88px;
     left: 0;

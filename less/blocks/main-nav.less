@@ -40,6 +40,7 @@
 
 .main-nav__link {
   .text(17px; 24px; @color-title; bold);
+  position: relative;
   display: block;
   padding: 27px 60px 27px 76px;
   border-bottom: 1px solid @color-border;
@@ -51,8 +52,29 @@
   display: none;
 }
 
-.main-nav__item--search:hover .main-nav__item-icon-search {
-  fill: green;
+.main-nav__item-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  fill: @color-icon-nav;
+}
+
+.main-nav__item--search:hover .main-nav__item-icon--search,
+.main-nav__item--basket:hover .main-nav__item-icon--basket {
+  fill: @color-legend;
+}
+
+.main-nav__item--search:active .main-nav__item-icon--search,
+.main-nav__item--basket:active .main-nav__item-icon--basket {
+  fill: @color-down-nav;
+}
+
+.main-nav__item:hover .main-nav__link {
+  color: @color-hover;
+}
+
+.main-nav__item:active .main-nav__link {
+  color: @color-active;
 }
 
 @media @tablet-widths {
@@ -79,8 +101,20 @@
     border-bottom: 1px solid @color-border;
   }
 
+  .icon-logo .desktop-logo {
+    display: none;
+  }
+
   .main-nav__logo .main-nav__link {
-    padding: 23px 20px 23px 50px;
+    padding: 2px 20px 2px 50px;
+  }
+
+  .main-nav__logo:hover .main-nav__item-icon-logo {
+    fill: @color-hover-logo;
+  }
+
+  .main-nav__logo:active .main-nav__item-icon-logo {
+    fill: @color-active-logo;
   }
 
   .main-nav__link {
@@ -92,7 +126,7 @@
 
   .main-nav__item--search {
     order: 4;
-    width: 82px;
+    width: 83px;
     border-right: 1px solid @color-border;
     border-left: 1px solid @color-border;
     border-bottom: 1px solid @color-border;
@@ -206,10 +240,25 @@
   .main-nav__logo {
     flex-grow: 1;
     width: 250px;
+    padding: 0;
   }
 
   .main-nav__logo .main-nav__link {
-    padding-left: 62px;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    width: 150px;
+    height: 74px;
+    padding: 0;
+    transform: translateX(-50%);
+  }
+
+    .icon-logo .desktop-logo {
+    display: block;
+  }
+
+  .icon-logo .tablet-logo {
+    display: none;
   }
 
   .main-nav__item--tablet-color {
