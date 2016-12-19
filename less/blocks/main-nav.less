@@ -20,21 +20,24 @@
     }
   }
 
-  .main-nav--closed {
-    display: none;
-  }
+  .main-nav {
 
-  .main-nav--opened {
-    display: block;
-    animation: emersion 0.3s;
-  }
+    &--closed {
+      display: none;
+    }
 
-  .main-nav--nojs {
-    display: block;
-    position: static;
-    margin: 0;
-    border-top: 1px solid @color-border;
-    transform: translateY(0);
+    &--opened {
+      display: block;
+      animation: emersion 0.3s;
+    }
+
+    &--nojs {
+      display: block;
+      position: static;
+      margin: 0;
+      border-top: 1px solid @color-border;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -99,22 +102,22 @@
     width: 40%;
     flex-grow: 1;
     border-bottom: 1px solid @color-border;
+
+    &:hover .main-nav__item-logo {
+      fill: @color-hover-logo;
+    }
+
+    &:active .main-nav__item-logo {
+      fill: @color-active-logo;
+    }
+
+    & .main-nav__link {
+      padding: 18px 20px 15px 49px;
+    }
   }
 
-  .icon-logo .desktop-logo {
+  .main-nav__item-logo--desktop {
     display: none;
-  }
-
-  .main-nav__logo .main-nav__link {
-    padding: 2px 20px 2px 50px;
-  }
-
-  .main-nav__logo:hover .main-nav__item-icon-logo {
-    fill: @color-hover-logo;
-  }
-
-  .main-nav__logo:active .main-nav__item-icon-logo {
-    fill: @color-active-logo;
   }
 
   .main-nav__link {
@@ -130,10 +133,10 @@
     border-right: 1px solid @color-border;
     border-left: 1px solid @color-border;
     border-bottom: 1px solid @color-border;
-  }
 
-  .main-nav__item--search .main-nav__link {
-    font-size: 0;
+    & .main-nav__link {
+      font-size: 0;
+    }
   }
 
   .main-nav__item--basket {
@@ -141,29 +144,29 @@
     width: 315px;
     text-align: right;
     border-bottom: 1px solid @color-border;
-  }
 
-  .main-nav__item--basket .main-nav__link {
-    padding-right: 50px;
-    padding-top: 30px;
+    & .main-nav__link {
+      padding-right: 50px;
+      padding-top: 29px;
+    }
   }
 
   .main-nav__item--catalog {
     order: 6;
-  }
 
-  .main-nav__item--catalog .main-nav__link {
-    padding: 23px 18px 23px 50px;
-    font-size: 15px;
+    & .main-nav__link {
+      padding: 17px 18px 17px 50px;
+      font-size: 15px;
+    }
   }
 
   .main-nav__item--form {
     order: 7;
-  }
 
-  .main-nav__item--form .main-nav__link {
-    padding: 23px 18px;
-    font-size: 15px;
+    & .main-nav__link {
+      padding: 17px 28px;
+      font-size: 15px;
+    }
   }
 
   .main-nav__item--tablet {
@@ -176,7 +179,7 @@
   .main-nav__free {
     .text(15px; 24px; @color-text;);
     display: block;
-    padding: 23px 50px 23px 18px;
+    padding: 17px 50px 17px 18px;
   }
 
   .main-nav__item--tablet-color {
@@ -185,6 +188,18 @@
 
   .main-nav__item--color {
     background-color: @color-footer;
+  }
+
+  .main-nav__item-icon {
+
+    &--search {
+      top: 32px;
+      left: 32px;
+    }
+
+    &--basket {
+      left: 32px;
+    }
   }
 }
 
@@ -217,48 +232,51 @@
     width: 235px;
     border-bottom: 1px solid @color-border;
     border-right: 1px solid @color-border;
-  }
 
-  .main-nav__item--catalog .main-nav__link {
-    font-size: 17px;
-    padding-top: 30px;
-    padding-left: 50px;
+    & .main-nav__link {
+      font-size: 17px;
+      padding-top: 30px;
+      padding-left: 50px;
+    }
   }
 
   .main-nav__item--form {
     order: 2;
     width: 235px;
     border-bottom: 1px solid @color-border;
-  }
 
-  .main-nav__item--form .main-nav__link {
-    font-size: 17px;
-    padding-top: 30px;
-    padding-left: 35px;
+    & .main-nav__link {
+      font-size: 17px;
+      padding-top: 30px;
+      padding-left: 35px;
+    }
   }
 
   .main-nav__logo {
     flex-grow: 1;
     width: 250px;
     padding: 0;
+
+    & .main-nav__link {
+      position: absolute;
+      top: 3px;
+      left: 50%;
+      width: 150px;
+      height: 74px;
+      padding: 0;
+      transform: translateX(-50%);
+    }
   }
 
-  .main-nav__logo .main-nav__link {
-    position: absolute;
-    top: 3px;
-    left: 50%;
-    width: 150px;
-    height: 74px;
-    padding: 0;
-    transform: translateX(-50%);
-  }
+  .main-nav__item-logo {
 
-    .icon-logo .desktop-logo {
-    display: block;
-  }
+    &--desktop {
+      display: block;
+    }
 
-  .icon-logo .tablet-logo {
-    display: none;
+    &--tablet {
+      display: none;
+    }
   }
 
   .main-nav__item--tablet-color {

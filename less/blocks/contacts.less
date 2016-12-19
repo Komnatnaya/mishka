@@ -1,5 +1,18 @@
 .contacts {
+  position: relative;
   width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 100%;
+    height: 23px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 100% 100%;
+  }
 }
 
 .contacts__wrapper {
@@ -42,6 +55,14 @@
   display: block;
   color: @color-text;
 
+  &:hover {
+    color: @color-icon;
+  }
+
+  &:active {
+    color:@color-down-link;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -51,6 +72,14 @@
     width: 100%;
     height: 1px;
     background-color: @color-link;
+  }
+
+  &:hover::after {
+    background-color: @color-icon;
+  }
+
+  &:active::after {
+    background-color:@color-down-link;
   }
 }
 

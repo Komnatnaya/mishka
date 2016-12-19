@@ -40,14 +40,18 @@
   width: 50%;
   font-size: 0;
   background: @color-body;
-  border: 1px solid #ececec;
+  border: 1px solid @color-border;
 
   &:hover {
     fill: @color-hover-logo;
   }
 
   &:active {
-    fill: @color-active-logo
+    fill: @color-active-logo;
+  }
+
+  &:focus {
+    outline: none;
   }
 }
 

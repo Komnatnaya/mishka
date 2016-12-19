@@ -24,6 +24,26 @@
   text-align: center;
 }
 
+.category__link {
+  position: relative;
+  display: block;
+  padding: 6px 160px 11px 30px;
+}
+
+.category-icon-interior {
+  position: absolute;
+  top: 23px;
+  right: 37px;
+  fill: #3bb09d;
+}
+
+.category-icon-toys {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  fill: #35a999;
+}
+
 .category__item {
   position: relative;
 
@@ -77,42 +97,22 @@
   &:hover::after {
     display: block;
   }
-}
 
-.category__link {
-  position: relative;
-  display: block;
-  padding: 6px 160px 11px 30px;
-}
+  &:hover  .category-icon-interior {
+    fill: #29a592;
+  }
 
-.category-icon-interior {
-  position: absolute;
-  top: 23px;
-  right: 37px;
-  fill: #3bb09d;
-}
+  &:active  .category-icon-interior {
+    fill: #44c0aa;
+  }
 
-.category__item:hover  .category-icon-interior {
-  fill: #29a592;
-}
+  &:hover  .category-icon-toys {
+    fill: #239f8e;
+  }
 
-.category__item:active  .category-icon-interior {
-  fill: #44c0aa;
-}
-
-.category-icon-toys {
-  position: absolute;
-  top: 20px;
-  right: 26px;
-  fill: #35a999;
-}
-
-.category__item:hover  .category-icon-toys {
-  fill: #239f8e;
-}
-
-.category__item:active  .category-icon-toys {
-  fill: #37b2a0;
+  &:active  .category-icon-toys {
+    fill: #37b2a0;
+  }
 }
 
 @media @tablet-widths {
@@ -143,13 +143,22 @@
   }
 
   .category__header {
-    padding-top: 78px;
-    padding-bottom: 342px;
+    padding-top: 66px;
+    padding-bottom: 345px;
     background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: 50% 32%;
+  }
+
+  @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+      .category__header {
+        background-image: url("../img/hero-desktop@2x.jpg");
+      }
   }
 
   .category-icon-interior {
     top: 30px;
+    right: 35px;
   }
 
   .category-icon-toys {
