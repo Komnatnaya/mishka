@@ -1,4 +1,5 @@
 .category {
+  position: relative;
   width: 100%;
 }
 
@@ -24,21 +25,109 @@
 }
 
 .category__item {
-  padding: 0 30px;
-  &--interior {
-    background: @color-legend;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -5px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 6px;
   }
+
+  &--interior {
+    background-color: @color-legend;
+  }
+
+  &--interior:hover {
+    background-color: #59d5bc;
+  }
+
+  &--interior:active h3 {
+    color: #97e2d2;
+  }
+
+  &--interior::after {
+    background-color: #59d5bc;
+  }
+
   &--toys {
-    background: @color-category;
+    background-color: @color-category;
+  }
+
+  &--toys:hover {
+    background-color: #46c1ae;
+  }
+
+  &--toys:active h3 {
+    color: #8dd5c9;
+  }
+
+  &--toys::after {
+    background-color: #46c1ae;
+  }
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:hover::after {
+    display: block;
   }
 }
 
 .category__link {
+  position: relative;
   display: block;
-  padding: 8px 160px 8px 0;
+  padding: 6px 160px 11px 30px;
+}
+
+.category-icon-interior {
+  position: absolute;
+  top: 23px;
+  right: 37px;
+  fill: #3bb09d;
+}
+
+.category__item:hover  .category-icon-interior {
+  fill: #29a592;
+}
+
+.category__item:active  .category-icon-interior {
+  fill: #44c0aa;
+}
+
+.category-icon-toys {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  fill: #35a999;
+}
+
+.category__item:hover  .category-icon-toys {
+  fill: #239f8e;
+}
+
+.category__item:active  .category-icon-toys {
+  fill: #37b2a0;
 }
 
 @media @tablet-widths {
+
+  .category::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 36px;
+    width: 100%;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-size: 100% 100%;
+    background-repeat: repeat-x;
+  }
 
   .category__wrapper {
     display: flex;
@@ -48,12 +137,26 @@
     width: 50%;
   }
 
+  .category__link {
+    padding-bottom: 20px;
+    padding-left: 36px;
+  }
+
   .category__header {
     padding-top: 78px;
     padding-bottom: 342px;
     background-image: url("../img/hero-desktop@1x.jpg");
   }
-  
+
+  .category-icon-interior {
+    top: 30px;
+  }
+
+  .category-icon-toys {
+    top: 31px;
+    right: 33px;
+  }
+
   @media (min-resolution: 144dpi),
     (min-resolution: 1.5dppx) {
       .category__header {

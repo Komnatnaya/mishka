@@ -13,8 +13,7 @@
 .page-header__logo {
   position: relative;
   z-index: 2;
-  padding: 20px 0;
-  margin: 0 80px;
+  padding: 20px 60px;
   text-align: center;
   background-color: @color-body;
 }
@@ -30,10 +29,10 @@
 .page-header__toggle-nav {
   position: absolute;
   z-index: 3;
-  top: 20px;
-  right: 30px;
-  width: 30px;
-  height: 30px;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
   font-size: 0;
 }
 
@@ -41,9 +40,10 @@
 
   .page-header__toggle {
     position: relative;
-    top: 14px;
-    left: 5px;
+    top: 50%;
+    left: 50%;
     display: block;
+    transform: translate(-10px, -2px);
 
     &--close-nav {
       width: 20px;

@@ -14,7 +14,50 @@
 
 .seo__item {
   .text(17px; auto; @color-title; bold);
+  position: relative;
   padding-top: 85px;
+
+  &::before {
+    position: absolute;
+    height: 40px;
+    width: 60px;
+  }
+
+  &--flower::before {
+    content: url("../img/icon-feature-1.svg");
+    top: 31px;
+    left: 8px;
+  }
+
+  &--money::before {
+    content: url("../img/icon-feature-3.svg");
+    top: 31px;
+    left: 0;
+  }
+
+  &--heart::before {
+    content: url("../img/icon-feature-5.svg");
+    top: 36px;
+    left: 8px;
+  }
+
+  &--yarn::before {
+    content: url("../img/icon-feature-2.svg");
+    top: 34px;
+    left: 4px;
+  }
+
+  &--rocket::before {
+    content: url("../img/icon-feature-4.svg");
+    top: 35px;
+    left: -5px;
+  }
+
+  &--gift::before {
+    content: url("../img/icon-feature-6.svg");
+    top: 34px;
+    left: 4px;
+  }
 }
 
 @media @tablet-widths {
