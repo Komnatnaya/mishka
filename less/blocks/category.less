@@ -30,14 +30,14 @@
   padding: 6px 160px 11px 30px;
 }
 
-.category-icon-interior {
+.category__icon-interior {
   position: absolute;
   top: 23px;
   right: 37px;
   fill: #3bb09d;
 }
 
-.category-icon-toys {
+.category__icon-toys {
   position: absolute;
   top: 20px;
   right: 26px;
@@ -98,19 +98,19 @@
     display: block;
   }
 
-  &:hover  .category-icon-interior {
+  &:hover  .category__icon-interior {
     fill: #29a592;
   }
 
-  &:active  .category-icon-interior {
+  &:active  .category__icon-interior {
     fill: #44c0aa;
   }
 
-  &:hover  .category-icon-toys {
+  &:hover  .category__icon-toys {
     fill: #239f8e;
   }
 
-  &:active  .category-icon-toys {
+  &:active  .category__icon-toys {
     fill: #37b2a0;
   }
 }
@@ -156,21 +156,14 @@
       }
   }
 
-  .category-icon-interior {
+  .category__icon-interior {
     top: 30px;
     right: 35px;
   }
 
-  .category-icon-toys {
+  .category__icon-toys {
     top: 31px;
     right: 33px;
-  }
-
-  @media (min-resolution: 144dpi),
-    (min-resolution: 1.5dppx) {
-      .category__header {
-        background-image: url("../img/hero-desktop@2x.jpg");
-      }
   }
 }
 
@@ -181,6 +174,7 @@
   }
 
   .category__header {
-    padding-bottom: 327px;
+    padding-top: 61px;
+    padding-bottom: 324px;
   }
 }
