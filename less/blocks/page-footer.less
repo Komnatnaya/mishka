@@ -11,21 +11,22 @@
 }
 
 .page-footer__copyright {
-  padding-right: 50px;
-  padding-left: 67px;
+  padding-right: 30px;
+  padding-left: 30px;
 }
 
 .page-footer__copyright-link {
   .text(19px; 18px; @color-title; bold);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 191px;
-  padding: 15px 0 19px 0;
-  border-top: 1px solid #e5e5e5;
+  position: relative;
+  display: block;
+  padding: 28px 0 19px 37px;
+  border-top: 1px solid @color-border;
 }
 
 .page-footer__icon-htmlacademy {
+  position: absolute;
+  top: 18px;
+  right: 33px;
   fill: @color-legend;
 }
 
@@ -74,11 +75,15 @@
   .page-footer__copyright {
     width: 30%;
     padding: 0;
-    text-align: right;
   }
 
   .page-footer__copyright-link {
     border-top: none;
-    padding: 0;
+    padding: 23px 0 19px 17px;
+  }
+
+  .page-footer__icon-htmlacademy {
+    top: 12px;
+    right: -7px;
   }
 }
