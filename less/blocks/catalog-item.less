@@ -1,5 +1,13 @@
 .catalog-item {
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 5px 5px @color-shadow;
+  }
+
+  &:active {
+    box-shadow: 0 3px 4px @color-shadow;
+  }
 }
 
 .catalog-item__image {
@@ -18,6 +26,14 @@
   .text(17px; 24px; @color-title; bold);
   margin-top: 0;
   margin-bottom: 5px;
+
+  &:hover {
+    color: @color-hover;
+  }
+
+  &:active {
+    color: @color-active;
+  }
 }
 
 .catalog-item__buy {
@@ -31,6 +47,10 @@
   .text(15px; 24px; @color-title; bold);
 }
 
+.catalog-item__icon-basket {
+  fill: @color-icon-nav;
+}
+
 .catalog-item__basket {
   position: absolute;
   top: 26px;
@@ -38,7 +58,14 @@
   width: 21px;
   height: 21px;
   font-size: 0;
-  outline: 1px dashed gray;
+
+  &:hover .catalog-item__icon-basket {
+    fill: @color-legend;
+  }
+
+  &:active .catalog-item__icon-basket {
+    fill: @color-down-nav;
+  }
 }
 
 @media @tablet-widths {
