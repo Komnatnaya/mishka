@@ -22,16 +22,16 @@
     margin-bottom: 72px;
 
     ::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 36px;
-    width: 100%;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: 100% 100%;
-    background-repeat: repeat-x;
-  }
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      display: block;
+      height: 36px;
+      width: 100%;
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+    }
   }
 
   .catalog__wrapper {
@@ -42,8 +42,9 @@
 @media @desktop-widths {
 
   .catalog__header {
-    padding: 55px 0;
-    margin-bottom: 145px;
+    padding-top: 0;
+    padding-bottom: 76px;
+    margin-bottom: 120px;
   }
 
   .catalog__wrapper {
