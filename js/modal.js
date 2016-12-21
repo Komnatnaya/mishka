@@ -1,17 +1,22 @@
 'use strict';
 
-var link = document.querySelector('.modal-btn');
-var modal = document.querySelector('.modal');
-var overlay = document.querySelector('.overlay');
+var link = document.querySelectorAll('.modal-btn');
 
-link.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.classList.add('modal--show');
-  overlay.classList.add('overlay--show');
-});
+if(link.length > 0) {
+  var modal = document.querySelector('.modal');
+  var overlay = document.querySelector('.overlay');
 
-overlay.addEventListener('click', function(event) {
-  event.preventDefault();
-  modal.classList.remove('modal--show');
-  overlay.classList.remove('overlay--show');
-});
+  for(var i = 0; i < link.length; i++) {
+    link[i].addEventListener('click', function(event) {
+      event.preventDefault();
+      modal.classList.add('modal--show');
+      overlay.classList.add('overlay--show');
+    })
+  }
+
+  overlay.addEventListener('click', function(event) {
+    event.preventDefault();
+    modal.classList.remove('modal--show');
+    overlay.classList.remove('overlay--show');
+  })
+}
