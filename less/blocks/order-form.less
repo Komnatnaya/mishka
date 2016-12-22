@@ -20,13 +20,13 @@
 }
 
 .order-form__type {
-  .fieldset-border();
-  padding: 12px 0 11px 0;
+  padding-top: 12px;
+  padding-bottom: 11px;
 }
 
 .order-form__color {
-  .fieldset-border();
-  padding: 14px 0 15px 0;
+  padding-top: 14px;
+  padding-bottom: 15px;
 
   & .order-form__title {
     margin-bottom: 15px;
@@ -37,11 +37,6 @@
 .order-form__color-wrapper {
   display: flex;
   flex-direction: column;
-}
-
-.order-form__radio,
-.order-form__checkbox {
-  display: none;
 }
 
 .order-form__radio-label {
@@ -118,19 +113,28 @@
   }
 }
 
-.order-form__radio:checked + .order-form__radio-label::after {
-  display: block;
+.order-form__radio {
+  display: none;
+
+  &:checked + .order-form__radio-label::after {
+    display: block;
+  }
 }
 
-.order-form__checkbox:checked + .order-form__checkbox-label::after {
-  display: block;
+.order-form__checkbox {
+  display: none;
+
+  &:checked + .order-form__checkbox-label::after {
+    display: block;
+  }
 }
 
 .order-form__fullname {
-  .fieldset-border();
-  padding: 5px 0 10px 0;
+  padding-top: 5px;
+  padding-bottom: 10px;
 
   & .order-form__title {
+    display: block;
     margin-bottom: 30px;
   }
 }
@@ -150,10 +154,10 @@
 }
 
 .order-form__phone {
-  .fieldset-border();
-  padding: 0 0 2px 0;
+  padding-bottom: 2px;
 
   & .order-form__title {
+    display: block;
     margin-bottom: 8px;
   }
 }
@@ -192,12 +196,13 @@
   }
 }
 
-.order-form__e-mail {
-  .fieldset-border();
-  padding: 8px 0;
+.order-form__email {
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   & .order-form__title {
-    margin-bottom: 8px;
+    display: block;
+    margin-bottom: 9px;
   }
 
   & .order-form__title::after {
@@ -206,7 +211,7 @@
   }
 }
 
-.order-form__e-mail-wrapper {
+.order-form__email-wrapper {
   position: relative;
 }
 
@@ -217,9 +222,9 @@
   fill: @color-phone;
 }
 
-.order-form__email {
+.order-form__mail {
   .input-text();
-  padding: 15px 0;
+  padding: 15px 50px 14px 0;
   margin-bottom: 22px;
 
   &:hover {
@@ -241,10 +246,11 @@
 }
 
 .order-form__addition {
-  .fieldset-border();
-  padding: 2px 0 12px 0;
+  padding-top: 2px;
+  padding-bottom: 12px;
 
   & .order-form__title {
+    display: block;
     margin-bottom: 25px;
   }
 }
@@ -403,14 +409,14 @@
   }
 
   .order-form__tel,
-  .order-form__email {
+  .order-form__mail {
     .text(19px; 18px; @color-text);
     padding-left: 18px;
     padding-right: 55px;
     background-color: @color-footer;
   }
 
-  .order-form__e-mail {
+  .order-form__email {
     padding-top: 0;
     padding-bottom: 29px;
     background-color: @color-footer;
@@ -506,9 +512,5 @@
     width: 1050px;
     padding-left: 175px;
     padding-right: 175px;
-  }
-
-  .order-form__submit {
-
   }
 }

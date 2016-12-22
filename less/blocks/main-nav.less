@@ -72,12 +72,15 @@
   fill: @color-down-nav;
 }
 
-.main-nav__item:hover .main-nav__link {
-  color: @color-hover;
-}
+.main-nav__item {
 
-.main-nav__item:active .main-nav__link {
-  color: @color-active;
+  &:hover .main-nav__link {
+    color: @color-hover;
+  }
+
+  &:active .main-nav__link {
+    color: @color-active;
+  }
 }
 
 @media @tablet-widths {
