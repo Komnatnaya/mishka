@@ -25,6 +25,11 @@
   margin-bottom: 0;
 }
 
+.seo__list {
+  display: flex;
+  flex-direction: column;
+}
+
 .seo__item {
   .text(17px; auto; @color-title; bold);
   position: relative;
@@ -32,44 +37,60 @@
 
   &::before {
     position: absolute;
-    height: 40px;
-    width: 60px;
   }
 
   &--flower::before {
     content: url("../img/icon-feature-1.svg");
     top: 31px;
     left: 8px;
+    order: 1;
+    width: 32px;
+    height: 38px;
   }
 
   &--money::before {
     content: url("../img/icon-feature-3.svg");
     top: 31px;
     left: 0;
+    order: 3;
+    width: 47px;
+    height: 28px;
   }
 
   &--heart::before {
     content: url("../img/icon-feature-5.svg");
     top: 36px;
     left: 8px;
+    order: 5;
+    width: 34px;
+    height: 28px;
   }
 
   &--yarn::before {
     content: url("../img/icon-feature-2.svg");
     top: 34px;
     left: 4px;
+    order: 2;
+    width: 35px;
+    height: 35px;
   }
 
   &--rocket::before {
     content: url("../img/icon-feature-4.svg");
     top: 35px;
     left: -5px;
+    order: 4;
+    width: 55px;
+    height: 24px;
   }
 
   &--gift::before {
     content: url("../img/icon-feature-6.svg");
     top: 34px;
     left: 4px;
+    order: 6;
+    width: 33px;
+    height: 33px;
   }
 }
 
@@ -91,17 +112,14 @@
   }
 
   .seo__list {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .seo__items {
-    width: 50%;
-  }
-
   .seo__item {
     .text(20px; auto; @color-title; bold);
+    width: 50%;
     padding-right: 60px;
     padding-bottom: 25px;
   }
