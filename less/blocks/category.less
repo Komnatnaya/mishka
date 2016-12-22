@@ -34,14 +34,14 @@
   position: absolute;
   top: 23px;
   right: 37px;
-  fill: #3bb09d;
+  fill: @color-interior;
 }
 
 .category__icon-toys {
   position: absolute;
   top: 20px;
   right: 26px;
-  fill: #35a999;
+  fill: @color-toys;
 }
 
 .category__item {
@@ -63,15 +63,15 @@
   }
 
   &--interior:hover {
-    background-color: #59d5bc;
+    background-color: @color-interior-hover;
   }
 
   &--interior:active h3 {
-    color: #97e2d2;
+    color: @color-category-active;
   }
 
   &--interior::after {
-    background-color: #59d5bc;
+    background-color: @color-interior-hover;
   }
 
   &--toys {
@@ -79,15 +79,15 @@
   }
 
   &--toys:hover {
-    background-color: #46c1ae;
+    background-color: @color-icon;
   }
 
   &--toys:active h3 {
-    color: #8dd5c9;
+    color: @color-category-active-two;
   }
 
   &--toys::after {
-    background-color: #46c1ae;
+    background-color: @color-icon;
   }
 
   &:hover {
@@ -99,19 +99,19 @@
   }
 
   &:hover  .category__icon-interior {
-    fill: #29a592;
+    fill: @color-interior-icon-hover;
   }
 
   &:active  .category__icon-interior {
-    fill: #44c0aa;
+    fill: @color-interior-icon-active;
   }
 
   &:hover  .category__icon-toys {
-    fill: #239f8e;
+    fill: @color-toys-icon-hover;
   }
 
   &:active  .category__icon-toys {
-    fill: #37b2a0;
+    fill: @color-toys-icon-active;
   }
 }
 

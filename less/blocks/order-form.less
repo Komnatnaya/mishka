@@ -146,7 +146,6 @@
 
   &:focus {
     border-color: @color-link;
-    outline: none;
   }
 }
 
@@ -172,7 +171,7 @@
 
 .order-form__tel {
   .input-text();
-  padding: 15px 0;
+  padding: 15px 50px 15px 0;
   margin-bottom: 22px;
 
   &:hover {
@@ -338,10 +337,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    & label:nth-of-type(2n+1) {
+      flex-grow: 1;
+    }
   }
 
   .order-form__checkbox-label {
-    width: 48%;
+    width: 240px;
     padding: 29px 30px 29px 81px;
 
     &::before {
@@ -470,9 +473,14 @@
   .order-form__color-wrapper {
     justify-content: flex-start;
     padding-right: 0;
+
+    & label:nth-of-type(2n+1) {
+      flex-grow: 0;
+    }
   }
 
   .order-form__checkbox-label {
+    flex-grow: 0;
     width: 30%;
   }
 
