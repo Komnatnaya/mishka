@@ -113,18 +113,18 @@
   .page-header {
     position: relative;
     border-bottom: none;
-    
+
     &::after {
       content: "";
       position: absolute;
-      top: 85px;
+      top: 86px;
       left: 0;
       width: 100%;
       height: 200px;
       border-top: 1px solid @color-border;
       background-color: @color-header;
     }
-    
+
     &--color::after {
       background-color: @color-footer;
     }
@@ -140,6 +140,13 @@
 }
 
 @media @desktop-widths {
+
+  .page-header {
+
+    &::after {
+      top: 87px;
+    }
+  }
 
   .page-header__wrapper {
     width: 1150px;
