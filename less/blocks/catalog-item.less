@@ -1,5 +1,13 @@
 .catalog-item {
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 5px 5px @color-catalog-shadow;
+  }
+
+  &:active {
+    box-shadow: 0 3px 4px @color-catalog-shadow;
+  }
 }
 
 .catalog-item__image {
@@ -10,35 +18,54 @@
 
 .catalog-item__wrapper {
   .text(13px; 30px; @color-text);
-  padding: 27px 30px 24px 30px;
-  border: 1px solid #ededed;
+  padding: 27px 30px 23px 30px;
+  border: 1px solid @color-wrapper;
 }
 
 .catalog-item__title {
   .text(17px; 24px; @color-title; bold);
   margin-top: 0;
   margin-bottom: 5px;
+
+  &:hover {
+    color: @color-hover;
+  }
+
+  &:active {
+    color: @color-active;
+  }
 }
 
 .catalog-item__buy {
   position: relative;
-  padding-top: 18px;
+  padding-top: 17px;
   margin-top: 20px;
-  border-top: 1px solid #ececec;
+  border-top: 1px solid @color-border;
 }
 
 .catalog-item__price {
   .text(15px; 24px; @color-title; bold);
 }
 
+.catalog-item__icon-basket {
+  fill: @color-icon-nav;
+}
+
 .catalog-item__basket {
   position: absolute;
-  top: 26px;
-  right: 0;
+  top: 21px;
+  right: -4px;
   width: 21px;
   height: 21px;
   font-size: 0;
-  outline: 1px dashed gray;
+
+  &:hover .catalog-item__icon-basket {
+    fill: @color-legend;
+  }
+
+  &:active .catalog-item__icon-basket {
+    fill: @color-down-nav;
+  }
 }
 
 @media @tablet-widths {
@@ -55,7 +82,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
-    padding: 28px;
+    padding: 26px 28px 23px 25px;
   }
 
   .catalog-item__title {
@@ -64,6 +91,11 @@
 
   .catalog-item__price {
     .text(17px; 24px; @color-title; bold);
+    padding-left: 5px;
+  }
+
+  .catalog-item__basket {
+    right: 4px;
   }
 }
 
@@ -77,14 +109,19 @@
   .catalog-item__wrapper {
     flex-grow: 1;
     width: 100%;
-    padding: 27px 30px 24px 30px;
+    padding: 25px 26px 24px 26px;
   }
 
   .catalog-item__title {
-    margin-bottom: 2px
+    margin-bottom: 5px;
   }
 
   .catalog-item__buy {
-    margin-top: 15px;
+    padding-top: 19px;
+    margin-top: 14px;
+  }
+
+  .catalog-item__price {
+    padding-left: 0;
   }
 }

@@ -1,10 +1,12 @@
 .reviews {
-  .container();
+  width: 100%;
 }
 
 .reviews__wrapper {
   position: relative;
-  padding: 30px;
+  width: 320px;
+  margin: 0 auto;
+  padding: 27px 30px 30px 30px;
 }
 
 .reviews__title {
@@ -31,20 +33,48 @@
 
 .reviews__sliders-btn {
   display: flex;
-  margin: 33px 0;
+  margin: 28px 0 36px 0;
 }
+
 .reviews__slider-btn {
-  padding: 26px;
+  padding: 13px 26px;
   width: 50%;
   font-size: 0;
   background: @color-body;
-  border: 1px solid #ececec;
+  border: 1px solid @color-border;
+  cursor: pointer;
+
+  &:hover {
+    fill: @color-hover-logo;
+  }
+
+  &:active {
+    fill: @color-active-logo;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.reviews__slider-btn--prev {
+  border-left: none;
 }
 
 @media @tablet-widths {
 
   .reviews__wrapper {
-    padding: 70px 0 50px 0;
+    width: 768px;
+    padding: 77px 50px 50px 50px;
+    margin-bottom: 55px;
+    background: @color-body url("../img/review@1x.jpg") no-repeat;
+  }
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    .reviews__wrapper {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__title {
@@ -53,7 +83,7 @@
 
   .reviews__item {
     .text(17px; 30px; @color-text);
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   .reviews__list-slider {
@@ -76,26 +106,34 @@
   }
 
   .reviews__sliders-btn {
-    width: 25%;
+    width: 26%;
     margin: 0;
   }
 
   .reviews__slider-btn {
     border: none;
-    outline: 1px dashed gray;
+    padding-left: 10px;
+    padding-right: 13px;
   }
 
   .reviews__btn {
     position: absolute;
-    top: 70px;
-    right: 0;
-    width: 171px;
+    top: 79px;
+    right: 50px;
+    width: 175px;
   }
 }
 
 @media @desktop-widths {
+
   .reviews__wrapper {
-    padding-left: 175px;
+    width: 1050px;
+    padding: 71px 0 95px 175px;
+  }
+
+  .reviews__item {
+    padding-right: 80px;
+    margin-bottom: 38px;
   }
 
   .reviews__list cite {
@@ -107,6 +145,7 @@
   }
 
   .reviews__btn {
+    right: 0;
     width: 175px;
   }
 }

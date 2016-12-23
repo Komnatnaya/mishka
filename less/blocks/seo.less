@@ -1,4 +1,21 @@
 .seo {
+  position: relative;
+	width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 13px;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 70% 100%;
+  }
+}
+
+.seo__wrapper {
   .container();
   padding: 30px;
 }
@@ -8,41 +25,150 @@
   margin-bottom: 0;
 }
 
+.seo__list {
+  display: flex;
+  flex-direction: column;
+}
+
 .seo__item {
   .text(17px; auto; @color-title; bold);
+  position: relative;
   padding-top: 85px;
+
+  &::before {
+    position: absolute;
+  }
+
+  &--flower::before {
+    content: url("../img/icon-feature-1.svg");
+    top: 31px;
+    left: 8px;
+    width: 32px;
+    height: 38px;
+  }
+
+  &--money {
+    order: 1;
+  }
+
+  &--money::before {
+    content: url("../img/icon-feature-3.svg");
+    top: 31px;
+    left: 0;
+    width: 47px;
+    height: 28px;
+  }
+
+  &--heart {
+    order: 2;
+  }
+
+  &--heart::before {
+    content: url("../img/icon-feature-5.svg");
+    top: 36px;
+    left: 8px;
+    width: 34px;
+    height: 28px;
+  }
+
+  &--yarn {
+    order: 3;
+  }
+
+  &--yarn::before {
+    content: url("../img/icon-feature-2.svg");
+    top: 34px;
+    left: 4px;
+    width: 35px;
+    height: 35px;
+  }
+
+  &--rocket {
+    order: 4;
+  }
+
+  &--rocket::before {
+    content: url("../img/icon-feature-4.svg");
+    top: 35px;
+    left: -5px;
+    width: 55px;
+    height: 24px;
+  }
+
+  &--gift {
+    order: 5;
+  }
+
+  &--gift::before {
+    content: url("../img/icon-feature-6.svg");
+    top: 34px;
+    left: 4px;
+    width: 33px;
+    height: 33px;
+  }
 }
 
 @media @tablet-widths {
 
   .seo {
-    padding: 30px 0 60px 0;
+
+    &::before {
+      height: 20px;
+    }
+  }
+
+  .seo__wrapper{
+    padding: 70px 0 55px 0;
+  }
+
+  .seo__title {
+    margin: 0;
+    padding-bottom: 16px;
   }
 
   .seo__list {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .seo__items {
-    width: 50%;
-  }
-
   .seo__item {
     .text(20px; auto; @color-title; bold);
-    padding-right: 35px;
+    width: 50%;
+    padding-right: 60px;
+    padding-bottom: 25px;
+
+    &--money {
+      order: 2;
+    }
+
+    &--heart {
+      order: 4;
+    }
+
+    &--yarn {
+      order: 1;
+    }
+
+    &--rocket {
+      order: 3;
+    }
   }
 }
 
 @media @desktop-widths {
 
+  .seo {
+    &::before {
+      height: 30px;
+    }
+  }
+
   .seo__wrapper {
-    margin-left: 175px;
-    margin-right: 175px;
+    padding: 82px 175px 62px 175px;
   }
 
   .seo__item {
-    padding-right: 50px;
+    padding-right: 40px;
   }
 }
