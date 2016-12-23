@@ -1,6 +1,22 @@
 'use strict';
 
-//Открытие меню в мобильно версии
+//Маркет на карте на главной странице.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: {lat: 59.936705, lng: 30.321744}
+  });
+
+  var image = 'img/icon-map-pin.svg';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 59.936259, lng: 30.321744},
+    map: map,
+    icon: image
+  });
+}
+
+//Открытие меню в мобильно версии.
 
 var navMain = document.querySelector('.main-nav');
 var navButton = document.querySelector('.page-header__toggle-nav');
@@ -24,7 +40,7 @@ navButton.addEventListener('click', function(event) {
   }
 });
 
-//Открытие модального окна
+//Открытие модального окна.
 
 var link = document.querySelectorAll('.modal-btn');
 
