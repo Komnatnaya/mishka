@@ -28,7 +28,7 @@ gulp.task("style", function() {
         "last 2 Edge versions"
       ]}),
       mqpacker({
-        sort: false
+        sort: true
       })
     ]))
     .pipe(gulp.dest("build/css"))
@@ -75,7 +75,11 @@ gulp.task("clean", function() {
 
 gulp.task("serve", function() {
   server.init({
-    server: "build"
+    server: "build",
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
   });
   gulp.watch("less/**/*.less", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
