@@ -62,24 +62,22 @@
   fill: @color-icon-nav;
 }
 
-.main-nav__item--search:hover .main-nav__item-icon--search,
-.main-nav__item--basket:hover .main-nav__item-icon--basket {
-  fill: @color-legend;
-}
+.main-nav__link {
 
-.main-nav__item--search:active .main-nav__item-icon--search,
-.main-nav__item--basket:active .main-nav__item-icon--basket {
-  fill: @color-down-nav;
-}
-
-.main-nav__item {
-
-  &:hover .main-nav__link {
+  &:hover {
     color: @color-hover;
   }
 
-  &:active .main-nav__link {
+  &:active {
     color: @color-active;
+  }
+
+  &:hover .main-nav__item-icon {
+    fill: @color-legend;
+  }
+
+  &:active .main-nav__item-icon {
+    fill: @color-down-nav;
   }
 }
 
@@ -107,16 +105,16 @@
     flex-grow: 1;
     border-bottom: 1px solid @color-border;
 
-    &:hover .main-nav__item-logo {
-      fill: @color-hover-logo;
-    }
-
-    &:active .main-nav__item-logo {
-      fill: @color-active-logo;
-    }
-
     & .main-nav__link {
-      padding: 18px 20px 15px 49px;
+      padding: 18px 20px 15px 47px;
+
+      &:hover .main-nav__item-logo {
+        fill: @color-hover-logo;
+      }
+
+      &:active .main-nav__item-logo {
+        fill: @color-active-logo;
+      }
     }
   }
 
@@ -168,7 +166,7 @@
     order: 7;
 
     & .main-nav__link {
-      padding: 17px 28px;
+      padding: 17px 20px;
       font-size: 15px;
     }
   }
@@ -186,12 +184,14 @@
     padding: 17px 50px 17px 18px;
   }
 
+  .main-nav__item--color,
   .main-nav__item--tablet-color {
     background-color: @color-footer;
   }
 
-  .main-nav__item--color {
-    background-color: @color-footer;
+  .main-nav__item--incolor,
+  .main-nav__item--tablet-incolor{
+    background-color: @color-header;
   }
 
   .main-nav__item-icon {
@@ -286,11 +286,16 @@
     }
   }
 
-  .main-nav__item--tablet-color {
+  .main-nav__item--tablet-color,
+  .main-nav__item--tablet-incolor {
     background-color: @color-body;
   }
 
   .main-nav__item--desktop-color {
     background-color: @color-footer;
+  }
+
+  .main-nav__item--desktop-incolor {
+    background-color: @color-header;
   }
 }

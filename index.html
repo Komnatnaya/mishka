@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Мишка</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <script>
       // Picture element HTML5 shiv
       document.createElement( "picture" );
     </script>
-    <script src="js/picturefill.js" async></script>
+    <script src="js/picturefill.min.js" async></script>
   </head>
 
   <body>
@@ -169,10 +169,10 @@
                 </svg>
               </a>
             </li>
-            <li class="main-nav__item  main-nav__item--catalog">
+            <li class="main-nav__item  main-nav__item--catalog  main-nav__item--tablet-incolor">
               <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="main-nav__item  main-nav__item--form">
+            <li class="main-nav__item  main-nav__item--form  main-nav__item--tablet-incolor">
               <a class="main-nav__link" href="form.html">Вязание на заказ</a>
             </li>
             <li class="main-nav__item  main-nav__item--search">
@@ -189,13 +189,13 @@
                 </svg>Корзина: пока пуста
               </a>
             </li>
-            <li class="main-nav__item  main-nav__item--desktop">
+            <li class="main-nav__item  main-nav__item--desktop  main-nav__item--desktop-incolor">
               <a class="main-nav__link  main-nav__link-new" href="#">Новые поступления</a>
             </li>
-            <li class="main-nav__item  main-nav__item--desktop">
+            <li class="main-nav__item  main-nav__item--desktop  main-nav__item--desktop-incolor">
               <a class="main-nav__link  main-nav__link-sale" href="#">Распродажа</a>
             </li>
-            <li class="main-nav__item  main-nav__item--tablet">
+            <li class="main-nav__item  main-nav__item--tablet  main-nav__item--incolor">
               <span class="main-nav__free">Бесплатная доставка по России</span>
             </li>
           </ul>
@@ -208,7 +208,7 @@
         <h1 class="category__title">Милые штуки ручной работы&nbsp;для&nbsp;дома</h1>
       </div>
       <div class="category__wrapper">
-        <div class="category__item  category__item--interior">
+        <div class="category__item">
           <a class="category__link  category__link--interior" href="#">
             <h3>Предметы интерьера</h3>
             <svg class="category__icon-interior" width="41" height="63">
@@ -216,7 +216,7 @@
             </svg>
           </a>
         </div>
-        <div class="category__item  category__item--toys">
+        <div class="category__item">
           <a class="category__link  category__link--toys" href="#">
             <h3>Детские игрушки</h3>
             <svg class="category__icon-toys" width="60" height="60">
@@ -338,8 +338,7 @@
           </div>
         </div>
       </div>
-      <div class="contacts__map">
-        <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1680.735151015203!2d30.32184139327696!3d59.936419864753475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1482350352888" height="457" style="border:0" allowfullscreen></iframe>
+      <div class="contacts__map" id="map">
       </div>
       <div class="contacts__btn-wrapper">
         <a class="contacts__btn  btn" href="feedback.html">Напишите нам</a>
@@ -349,7 +348,7 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo-block">
-          <a class="page-footer__logo" href="index.html">
+          <a class="page-footer__logo">
             <svg class="page-footer__icon-logo" width="102" height="35">
               <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-footer"/>
             </svg>
@@ -403,8 +402,9 @@
 
     <div class="overlay"></div>
 
-    <script src="js/menu.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvX8nsGdFNcK4ybTiUACjhRdjuEzZ9eAA&signed_in=true&callback=initMap">
+    </script>
 
   </body>
 </html>
