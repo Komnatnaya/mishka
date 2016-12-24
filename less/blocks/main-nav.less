@@ -63,7 +63,7 @@
 }
 
 .main-nav__link {
-  
+
   &:hover {
     color: @color-hover;
   }
@@ -71,7 +71,7 @@
   &:active {
     color: @color-active;
   }
-  
+
   &:hover .main-nav__item-icon {
     fill: @color-legend;
   }
@@ -107,7 +107,7 @@
 
     & .main-nav__link {
       padding: 18px 20px 15px 47px;
-      
+
       &:hover .main-nav__item-logo {
         fill: @color-hover-logo;
       }
@@ -184,12 +184,14 @@
     padding: 17px 50px 17px 18px;
   }
 
+  .main-nav__item--color,
   .main-nav__item--tablet-color {
     background-color: @color-footer;
   }
 
-  .main-nav__item--color {
-    background-color: @color-footer;
+  .main-nav__item--incolor,
+  .main-nav__item--tablet-incolor{
+    background-color: @color-header;
   }
 
   .main-nav__item-icon {
@@ -284,11 +286,16 @@
     }
   }
 
-  .main-nav__item--tablet-color {
+  .main-nav__item--tablet-color,
+  .main-nav__item--tablet-incolor {
     background-color: @color-body;
   }
 
   .main-nav__item--desktop-color {
     background-color: @color-footer;
+  }
+
+  .main-nav__item--desktop-incolor {
+    background-color: @color-header;
   }
 }
