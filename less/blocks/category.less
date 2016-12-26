@@ -43,7 +43,7 @@
   position: relative;
   display: block;
   padding: 6px 160px 11px 30px;
-  
+
   &::after {
     content: "";
     position: absolute;
@@ -119,10 +119,10 @@
     position: absolute;
     bottom: -10px;
     left: 0;
-    height: 36px;
+    height: 30px;
     width: 100%;
     background-image: url("../img/bg-zigzag-fill.svg");
-    background-size: 80% 100%;
+    background-size: auto 30px;
     background-repeat: repeat-x;
   }
 
@@ -165,6 +165,14 @@
 }
 
 @media @desktop-widths {
+
+  .category{
+
+    &::after {
+      height: 36px;
+      background-size: auto 36px;
+    }
+  }
 
   .category__link {
     padding-right: 335px;

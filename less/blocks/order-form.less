@@ -74,6 +74,10 @@
     background-color: @color-link;
     border-radius: 50%;
   }
+
+  &:active::after {
+    display: block;
+  }
 }
 
 .order-form__checkbox-label {
@@ -111,6 +115,10 @@
     border-bottom: 2px solid @color-title;
     transform: rotate(-45deg);
   }
+
+  &:active::after {
+    display: block;
+  }
 }
 
 .order-form__radio {
@@ -119,6 +127,10 @@
   &:checked + .order-form__radio-label::after {
     display: block;
   }
+
+  &:checked + .order-form__radio-label:active::after {
+    display: none;
+  }
 }
 
 .order-form__checkbox {
@@ -126,6 +138,10 @@
 
   &:checked + .order-form__checkbox-label::after {
     display: block;
+  }
+
+  &:checked + .order-form__checkbox-label:active::after {
+    display: none;
   }
 }
 
