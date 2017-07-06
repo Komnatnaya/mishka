@@ -2313,6 +2313,7 @@ input:focus {
   .category__header {
     padding-top: 61px;
     padding-bottom: 324px;
+    background-size: 110%;
   }
   .contacts__wrapper {
     width: 1050px;
