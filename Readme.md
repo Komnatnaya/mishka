@@ -1,7 +1,6 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
-* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/id86119).
 
 
 ---
